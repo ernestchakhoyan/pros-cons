@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.arguments {
+    flex: 1;
+    border: $border-size solid #8b8b8b;
+
+    > header {
+        height: $header-height;
+        padding: $padding-size;
+        border: solid #8b8b8b;
+        border-width: 0 0 $border-size 0;
+
+        text-align: center;
+        text-transform: uppercase;
+        line-height: $header-height - 2 * $padding-size;
+    }
+
+    ol {
+        max-height: calc(100vh - #{2 * $header-height +  2 * $border-size});
+        margin: 0;
+        overflow: auto;
+
+        li {
+            margin: 10px 0;
+
+            input {
+                display: inline-flex;
+                width: 80%;
+                height: 20px;
+                border: 0 none;
+                background: none;
+
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    & + & {
+        border-left-width: 0;
+    }
+
+}
